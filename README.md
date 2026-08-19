@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# CloudForge — Cloud & Platform Engineering
+
+CloudForge is a React + TypeScript + Vite homepage for cloud and platform engineering.
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

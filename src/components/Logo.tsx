@@ -24,7 +24,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-7 h-7", showText = tr
       {showText && (
         <div className="flex flex-col">
           <span className="font-semibold text-sm tracking-tight text-[#18181B] font-mono leading-none">
-            STACKPILOT
+            CLOUDFORGE
           </span>
           <span className="text-[10px] text-[#71717A] tracking-wider uppercase font-medium mt-0.5">
             Cloud & Platform Engineering

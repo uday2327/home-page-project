@@ -9,7 +9,7 @@ interface EasterEggTerminalProps {
 export const EasterEggTerminal: React.FC<EasterEggTerminalProps> = ({ isOpen, onClose }) => {
   const [input, setInput] = useState('');
   const [history, setHistory] = useState<Array<{ text: string; type: 'in' | 'out' | 'accent' }>>([
-    { text: 'STACKPILOT Unified Cloud CLI v2.4.0', type: 'accent' },
+    { text: 'CLOUDFORGE Unified Cloud CLI v2.4.0', type: 'accent' },
     { text: 'Type "help" to view diagnostic commands or "exit" to close.', type: 'out' },
   ]);
 
@@ -69,7 +69,7 @@ export const EasterEggTerminal: React.FC<EasterEggTerminalProps> = ({ isOpen, on
 
       case 'scan':
         newHistory.push(
-          { text: 'Executing: trivy image --severity HIGH,CRITICAL cr.stackpilot.dev/app:v2.4.0', type: 'accent' },
+          { text: 'Executing: trivy image --severity HIGH,CRITICAL cr.cloudforge.dev/app:v2.4.0', type: 'accent' },
           { text: '  Target: distroless-node20-rootless:latest', type: 'out' },
           { text: '  Results: 0 Vulnerabilities found. Cosign signature verified.', type: 'out' }
         );
@@ -91,7 +91,7 @@ export const EasterEggTerminal: React.FC<EasterEggTerminalProps> = ({ isOpen, on
           { text: '[bonus] Found the Secret Engineering CLI!', type: 'accent' },
           { text: '  "We don’t want a trivia quiz. We want to watch you think like an engineer."', type: 'out' },
           { text: '  A frontend demo built with systems thinking and careful detail.', type: 'out' },
-          { text: '  StackPilot: Built for Acdyon Technologies Frontend Challenge 2026.', type: 'accent' }
+          { text: '  CloudForge: Built for Acdyon Technologies Frontend Challenge 2026.', type: 'accent' }
         );
         break;
 
@@ -124,7 +124,7 @@ export const EasterEggTerminal: React.FC<EasterEggTerminalProps> = ({ isOpen, on
         <div className="px-4 py-3 bg-black/40 border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <TerminalIcon className="w-4 h-4 text-[#3B82F6]" />
-            <span className="font-semibold text-white">stackpilot-cli ~ /opt/production</span>
+            <span className="font-semibold text-white">cloudforge-cli ~ /opt/production</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-[#A1A1AA] border border-white/10 px-1.5 py-0.5 rounded">ESC to close</span>

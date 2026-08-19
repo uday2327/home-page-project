@@ -6,13 +6,10 @@ export const FinalCTA: React.FC = () => {
     <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#FAF9F5] border-t border-[#18181B]/8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center relative">
         
-        {/* Subtle Accent Pill */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#18181B]/5 border border-[#18181B]/10 text-[#18181B] text-xs font-mono tracking-wider uppercase font-medium mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-          PRODUCTION READINESS
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#18181B]/5 border border-[#18181B]/10 text-[#18181B] text-xs tracking-wider uppercase font-medium mb-6">
+          START A PROJECT
         </div>
 
-        {/* Section 29 Headline */}
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#18181B] leading-tight max-w-2xl mx-auto">
           Your application is ready.<br />Is your infrastructure?
         </h2>

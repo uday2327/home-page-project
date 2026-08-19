@@ -73,7 +73,7 @@ export const SolutionPillars: React.FC = () => {
     },
   ];
 
-  // Section 14: Problem-to-Technology Mapping Matrix (Communicating expertise over resume logo dumps)
+  // Problem-to-technology mapping
   const problemMappings = [
     { problem: 'Configuration Management', tech: 'Puppet', role: 'Idempotent state enforcement & drift prevention' },
     { problem: 'Containerization', tech: 'Docker', role: 'Hermetic packaging and minimal base image security' },
@@ -89,8 +89,7 @@ export const SolutionPillars: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-14">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
             CORE CAPABILITIES
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
@@ -122,7 +121,7 @@ export const SolutionPillars: React.FC = () => {
                   </div>
 
                   {/* Title & Headline */}
-                  <h3 className="text-xs font-mono font-bold tracking-wider text-[#71717A] uppercase mb-1">
+                  <h3 className="text-xs font-semibold tracking-wider text-[#71717A] uppercase mb-1">
                     {pillar.title}
                   </h3>
                   <h4 className="text-lg font-bold text-[#18181B] tracking-tight mb-3">
@@ -134,7 +133,7 @@ export const SolutionPillars: React.FC = () => {
 
                   {/* Capabilities List */}
                   <div className="pt-4 border-t border-[#18181B]/6 space-y-2 mb-6">
-                    <div className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider mb-2">
+                    <div className="text-[11px] text-[#71717A] uppercase tracking-wider mb-2">
                       Capabilities
                     </div>
                     <div className="flex flex-wrap gap-1.5">
@@ -163,7 +162,7 @@ export const SolutionPillars: React.FC = () => {
           })}
         </div>
 
-        {/* Section 14: Problem-First Technology Architecture */}
+        {/* Problem-first technology architecture */}
         <div className="mt-16 pt-12 border-t border-[#18181B]/8">
           <div className="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
@@ -189,8 +188,7 @@ export const SolutionPillars: React.FC = () => {
                   <div className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider">
                     {item.problem}
                   </div>
-                  <div className="text-sm font-mono font-bold text-[#18181B] mt-0.5 mb-1.5 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                  <div className="text-sm font-mono font-bold text-[#18181B] mt-0.5 mb-1.5">
                     {item.tech}
                   </div>
                 </div>

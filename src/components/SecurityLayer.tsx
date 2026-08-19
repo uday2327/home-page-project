@@ -90,9 +90,8 @@ export const SecurityLayer: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 06 · DEVSECOPS & RESILIENCY
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            SECURITY & RELIABILITY
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Security isn't a final step.
@@ -108,16 +107,16 @@ export const SecurityLayer: React.FC = () => {
         {/* Security Surrounding Visual Wrapper */}
         <div className="product-card rounded-2xl p-6 sm:p-8 bg-white border border-[#18181B]/8 shadow-2xs">
           
-          {/* Top Bar Banner: Continuous Security Perimeter */}
+          {/* Security summary */}
           <div className="p-3 rounded-xl bg-blue-50/70 border border-blue-200/60 mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <ShieldCheck className="w-4 h-4 text-[#2563EB]" />
               <span className="text-xs font-mono font-semibold text-[#18181B]">
-                PERIMETER: Continuous Security Envelope Active
+                Security across the lifecycle
               </span>
             </div>
             <span className="text-[10px] font-mono text-[#2563EB] font-semibold">
-              Zero-Trust Enforcement
+              Zero-trust controls
             </span>
           </div>
 
@@ -149,10 +148,10 @@ export const SecurityLayer: React.FC = () => {
           <div className="pt-6 border-t border-[#18181B]/6">
             <div className="flex items-center justify-between mb-4">
               <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                Integrated Security Controls Matrix
+                Security controls
               </span>
               <span className="text-[11px] font-mono text-[#71717A]">
-                Click control to inspect standard
+                Select a control
               </span>
             </div>
 

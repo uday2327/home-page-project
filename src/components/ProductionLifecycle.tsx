@@ -95,8 +95,7 @@ export const ProductionLifecycle: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
             THE PRODUCTION LAYER
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
@@ -129,7 +128,7 @@ export const ProductionLifecycle: React.FC = () => {
                     <span className="text-[10px] font-mono text-[#71717A]">{stage.step}</span>
                     <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-[#2563EB]' : 'text-[#71717A] group-hover:text-[#18181B]'}`} />
                   </div>
-                  <div className="text-xs font-mono font-semibold text-[#18181B] mb-1">
+                  <div className="text-xs font-semibold text-[#18181B] mb-1">
                     {stage.title}
                   </div>
                   <div className="text-[11px] text-[#52525B] line-clamp-2 leading-snug">
@@ -165,8 +164,8 @@ export const ProductionLifecycle: React.FC = () => {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono font-bold text-[#18181B]">
-                          {stage.step} · {stage.title}
+                        <span className="text-xs font-semibold text-[#18181B]">
+                          {stage.step} {stage.title}
                         </span>
                         <span className="text-[10px] font-mono text-[#2563EB]">{stage.metrics}</span>
                       </div>

@@ -68,48 +68,24 @@ export const ArchitectureHero: React.FC = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto mt-10 sm:mt-14">
-      {/* Product Mockup Container */}
+      {/* Blueprint Visual Canvas */}
       <div className="product-card rounded-2xl overflow-hidden border border-[#18181B]/10 bg-[#FFFFFF] shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        
-        {/* Mock Window Top Bar */}
-        <div className="px-4 py-3 bg-[#F8F7F2] border-b border-[#18181B]/8 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#18181B]/20 inline-block" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#18181B]/20 inline-block" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#18181B]/20 inline-block" />
-            <span className="ml-2 font-mono text-[11px] text-[#71717A] tracking-tight font-medium">
-              production-blueprint.live.spec
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse-subtle" />
-              TOPOLOGY SYNCED
-            </span>
-          </div>
-        </div>
-
-        {/* Blueprint Visual Canvas */}
         <div className="p-5 sm:p-8 bg-[#FAF9F5]/50">
           
           {/* Main Flow Representation */}
           <div className="space-y-4">
             
             {/* Top Node: Application Source */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#18181B]/8 shadow-2xs">
+            <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-[#18181B]/8 shadow-2xs">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-[#18181B]/5 text-[#18181B]">
                   <GitBranch className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#71717A] uppercase tracking-wider">Source Layer</div>
-                  <div className="text-sm font-semibold text-[#18181B]">Application Code · React + Node.js</div>
+                  <div className="text-sm font-semibold text-[#18181B]">Application Code</div>
+                  <div className="text-xs font-mono text-[#52525B] mt-0.5">React + Node.js</div>
                 </div>
               </div>
-              <span className="text-[11px] font-mono text-[#52525B] bg-[#FAF9F5] px-2.5 py-1 rounded-md border border-[#18181B]/6">
-                v2.4.0-prod
-              </span>
             </div>
 
             {/* Down Connector */}
@@ -118,19 +94,17 @@ export const ArchitectureHero: React.FC = () => {
             </div>
 
             {/* Cloud Platform Node */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#18181B]/8 shadow-2xs">
+            <div className="flex items-center justify-between p-4 rounded-xl bg-white border border-[#18181B]/8 shadow-2xs">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-blue-50 text-[#2563EB]">
                   <Layers className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#71717A] uppercase tracking-wider">Cloud Fabric</div>
-                  <div className="text-sm font-semibold text-[#18181B]">Cloud Platform & Virtual Private Cloud (VPC)</div>
+                  <div className="text-sm font-semibold text-[#18181B]">Cloud Platform</div>
+                  <div className="text-xs font-mono text-[#52525B] mt-0.5">Virtual Private Cloud (VPC)</div>
                 </div>
               </div>
-              <span className="text-[11px] font-mono text-[#2563EB] bg-blue-50/80 px-2.5 py-1 rounded-md border border-blue-200/60 font-medium">
-                Multi-AZ Isolated
-              </span>
+              <span className="text-[11px] text-[#71717A]">Multi-AZ</span>
             </div>
 
             {/* Split Connectors */}
@@ -161,7 +135,7 @@ export const ArchitectureHero: React.FC = () => {
                 <div className="flex items-center justify-between mb-1.5">
                   <div className="flex items-center gap-2">
                     <Box className="w-4 h-4 text-[#2563EB]" />
-                    <span className="text-xs font-mono font-semibold text-[#18181B]">Container (Docker)</span>
+                    <span className="text-sm font-semibold text-[#18181B]">Docker</span>
                   </div>
                   {selectedTech === 'docker' && <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB]" />}
                 </div>
@@ -181,17 +155,13 @@ export const ArchitectureHero: React.FC = () => {
                 <div className="flex items-center justify-between mb-1.5">
                   <div className="flex items-center gap-2">
                     <Database className="w-4 h-4 text-[#2563EB]" />
-                    <span className="text-xs font-mono font-semibold text-[#18181B]">Database (PostgreSQL)</span>
+                    <span className="text-sm font-semibold text-[#18181B]">PostgreSQL</span>
                   </div>
                   {selectedTech === 'database' ? (
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB]" />
-                  ) : (
-                    <span className="text-[10px] font-mono text-[#71717A] bg-[#FAF9F5] px-1.5 py-0.5 rounded border border-[#18181B]/6">
-                      Replica + WAL
-                    </span>
-                  )}
+                  ) : null}
                 </div>
-                <p className="text-xs text-[#52525B]">Automated snapshot & failover</p>
+                <p className="text-xs text-[#52525B]">Persistent relational storage</p>
               </button>
             </div>
 
@@ -213,46 +183,20 @@ export const ArchitectureHero: React.FC = () => {
               <div className="flex items-center justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-[#2563EB]" />
-                  <span className="text-xs font-mono font-semibold text-[#18181B]">Kubernetes Cluster Orchestration</span>
+                  <span className="text-sm font-semibold text-[#18181B]">Kubernetes</span>
                 </div>
-                {selectedTech === 'kubernetes' ? (
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB]" />
-                ) : (
-                  <span className="text-[10px] font-mono text-[#71717A]">Click to inspect</span>
-                )}
+                {selectedTech === 'kubernetes' && <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB]" />}
               </div>
-              <p className="text-xs text-[#52525B]">Production cluster · Ingress controller · Service discovery · Pod autoscaler</p>
+              <p className="text-xs text-[#52525B]">Container orchestration, scaling and service discovery</p>
             </button>
-
-            {/* Down Connector */}
-            <div className="flex justify-center">
-              <div className="h-4 w-px bg-[#18181B]/20" />
-            </div>
-
-            {/* Production Destination */}
-            <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#18181B] text-[#FAF9F5] shadow-xs">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-subtle" />
-                <div>
-                  <div className="text-[10px] font-mono text-[#A1A1AA] uppercase tracking-wider">Live Target</div>
-                  <div className="text-sm font-semibold tracking-tight">Secure, High-Availability Production</div>
-                </div>
-              </div>
-              <span className="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-500/20">
-                99.99% SLA
-              </span>
-            </div>
 
           </div>
 
-          {/* Section 11: Interactive Exploration Tabs */}
-          <div className="mt-6 pt-5 border-t border-[#18181B]/8">
+          {/* Interactive layer details */}
+          <div className="mt-8 pt-6 border-t border-[#18181B]/8">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#71717A] font-medium">
-                Select Platform Layer:
-              </span>
-              <span className="text-[11px] text-[#71717A] font-mono">
-                Interactive Architecture Inspector
+              <span className="text-xs font-semibold text-[#18181B]">
+                Architecture layers
               </span>
             </div>
 
@@ -265,7 +209,7 @@ export const ArchitectureHero: React.FC = () => {
                   <button
                     key={node.id}
                     onClick={() => setSelectedTech(node.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium font-mono transition-all flex items-center gap-1.5 ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
                       isSelected
                         ? 'bg-[#18181B] text-[#FAF9F5] shadow-xs'
                         : 'bg-white text-[#52525B] hover:text-[#18181B] border border-[#18181B]/8 hover:border-[#18181B]/20'
@@ -282,17 +226,15 @@ export const ArchitectureHero: React.FC = () => {
             <div className="mt-3.5 p-3.5 rounded-xl bg-white border border-[#18181B]/8 transition-all">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-mono font-semibold text-[#18181B]">{activeTech.name}</span>
-                    <span className="text-[10px] text-[#71717A] font-mono px-1.5 py-0.2 bg-[#FAF9F5] rounded border border-[#18181B]/6">
-                      {activeTech.category}
-                    </span>
+                  <div className="mb-1">
+                    <span className="text-sm font-semibold text-[#18181B]">{activeTech.name}</span>
+                    <span className="ml-2 text-xs text-[#71717A]">{activeTech.category}</span>
                   </div>
-                  <p className="text-xs text-[#18181B] font-medium leading-relaxed">
+                  <p className="text-sm text-[#18181B] leading-relaxed">
                     {activeTech.description}
                   </p>
-                  <p className="text-[11px] font-mono text-[#52525B] mt-1.5">
-                    <span className="text-[#2563EB] font-semibold">Configured:</span> {activeTech.spec}
+                  <p className="text-xs font-mono text-[#52525B] mt-2">
+                    <span className="text-[#2563EB] font-medium">Details:</span> {activeTech.spec}
                   </p>
                 </div>
               </div>

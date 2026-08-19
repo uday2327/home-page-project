@@ -30,7 +30,7 @@ export const CaseStudies: React.FC = () => {
       architecture: 'CloudFront CDN → Application Load Balancer → Multi-AZ Docker ECS Clusters → RDS PostgreSQL with Automated Read Replicas & S3 Object Storage.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'AWS ECS', 'Terraform', 'GitHub Actions'],
       githubUrl: 'https://github.com/uday2327',
-      liveUrl: 'https://stackpilot.dev/work/saas-platform',
+      liveUrl: 'https://cloudforge.dev/work/saas-platform',
       architectureDetails: {
         ingress: 'AWS ALB + CloudFront TLS 1.3 edge termination',
         runtime: 'Docker OCI containerized tasks across 2 availability zones',
@@ -46,7 +46,7 @@ export const CaseStudies: React.FC = () => {
       architecture: 'Git Repository → ArgoCD Operator → Production Kubernetes Cluster (HPA Autoscaling, Ingress NGINX, Sealed Secrets) + Puppet Fleet Node Hardening.',
       technologies: ['Kubernetes', 'Puppet', 'ArgoCD', 'Terraform', 'Go', 'Prometheus', 'Grafana'],
       githubUrl: 'https://github.com/uday2327',
-      liveUrl: 'https://stackpilot.dev/work/k8s-gitops',
+      liveUrl: 'https://cloudforge.dev/work/k8s-gitops',
       architectureDetails: {
         ingress: 'NGINX Ingress Controller with cert-manager automated Let\'s Encrypt certificates',
         runtime: 'Kubernetes Pods with Horizontal Pod Autoscaler (HPA) and resource limits',
@@ -62,7 +62,7 @@ export const CaseStudies: React.FC = () => {
       architecture: 'Commit Hook → GitHub Actions CI Matrix → Trivy Container Scan → Checkov IaC Audit → Vault Dynamic Credential Injection → Production Blue/Green Deployment.',
       technologies: ['Next.js', 'Python FastAPI', 'HashiCorp Vault', 'Trivy', 'GitHub Actions', 'Docker', 'AWS KMS'],
       githubUrl: 'https://github.com/uday2327',
-      liveUrl: 'https://stackpilot.dev/work/devsecops',
+      liveUrl: 'https://cloudforge.dev/work/devsecops',
       architectureDetails: {
         ingress: 'WAF Rate Limiting + API Gateway OAuth2 JWT token verification',
         runtime: 'Distroless non-root Docker images deployed to isolated VPC subnets',
@@ -80,9 +80,8 @@ export const CaseStudies: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 09 · SELECTED SYSTEMS
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            OUR WORK
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Systems, explained plainly.
@@ -104,7 +103,7 @@ export const CaseStudies: React.FC = () => {
                   : 'border-transparent text-[#52525B] hover:text-[#18181B]'
               }`}
             >
-              <span className="text-[10px] font-mono text-[#71717A] uppercase block">CASE 0{idx + 1}</span>
+              <span className="text-[10px] text-[#71717A] uppercase block">Case 0{idx + 1}</span>
               <span className="text-xs font-mono font-medium text-current block mt-0.5 leading-snug">
                 {c.title}
               </span>
@@ -112,7 +111,7 @@ export const CaseStudies: React.FC = () => {
           ))}
         </div>
 
-        {/* Large Editorial Product Visual Layout (Section 25) */}
+        {/* Editorial product visual */}
         <div className="product-card rounded-2xl bg-white border border-[#18181B]/8 overflow-hidden shadow-2xs">
           
           {/* Visual Header / Diagram Box (Large Dominant Preview) */}
@@ -123,9 +122,8 @@ export const CaseStudies: React.FC = () => {
               <div className="p-5 sm:p-6 rounded-xl bg-white border border-[#18181B]/10 shadow-xs space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-[#18181B]/6">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                    <span className="text-xs font-mono font-bold text-[#18181B] uppercase">
-                      DEMO ARCHITECTURE · TOPOLOGY SPECIFICATION
+                    <span className="text-xs font-semibold text-[#18181B] uppercase">
+                      Architecture overview
                     </span>
                   </div>
                   <span className="text-[10px] font-mono text-[#71717A] bg-[#FAF9F5] px-2 py-0.5 rounded border border-[#18181B]/6">
@@ -135,7 +133,7 @@ export const CaseStudies: React.FC = () => {
 
                 <div className="font-mono text-xs text-[#18181B] leading-relaxed p-3.5 bg-[#FAF9F5] rounded-lg border border-[#18181B]/6">
                   <span className="text-[10px] uppercase text-[#71717A] block font-semibold mb-1">
-                    System Flow:
+                    Architecture flow:
                   </span>
                   {active.architecture}
                 </div>
@@ -206,7 +204,7 @@ export const CaseStudies: React.FC = () => {
             {/* Technologies */}
             <div className="pt-4 border-t border-[#18181B]/6">
               <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-2">
-                Engineered Technologies
+                  Technologies
               </span>
               <div className="flex flex-wrap gap-2">
                 {active.technologies.map((tech) => (

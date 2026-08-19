@@ -1,4 +1,4 @@
-# StackPilot — Architecture & Engineering Decisions (`DECISIONS.md`)
+# CloudForge — Architecture & Engineering Decisions (`DECISIONS.md`)
 
 *Submission for the Acdyon Technologies Frontend Challenge (Part 2 — The Premium Home Page)*
 
@@ -13,7 +13,7 @@ The ubiquitous "marketing SaaS template" approach:
 - Arbitrary pricing cards ($499 / $999 / $4,999) that treat bespoke platform infrastructure like packaged commodity consumer goods.
 - Loud, distracting neon/cyberpunk glowing gradients and disorienting parallax animations.
 
-#### **What was engineered instead (StackPilot):**
+#### **What was engineered instead (CloudForge):**
 We adopted an **engineering-first product interface model** grounded in the *Mobbin* design system ethos and subtle *One Page Love* warm ivory atmosphere (`#FAF9F5`):
 - **Problem-first technology taxonomy:** Technologies are framed by the precise operational problem they solve (e.g., Puppet for *Declarative Configuration & Drift Prevention*, Kubernetes for *Self-Healing Container Orchestration*, Terraform for *Reproducible IaC State*), rather than acting as a static developer resume.
 - **Interactive Product Proof over Claims:** Rather than merely claiming we design production architectures, the user is given an interactive **Production Blueprint Wizard & Inspector**, allowing real-time topology synthesis and stage-by-stage pipeline inspection.
@@ -29,7 +29,7 @@ To deliver an instantaneous, responsive interactive experience within the fronte
 #### **What I'd Build With a Full Week:**
 1. **Interactive Canvas Flow Editor (React Flow / WebGL):** Allow users to drag, drop, and rewire custom VPC subnets, RDS read replicas, and ingress controllers with real-time latency calculation and estimated AWS/GCP cost projections.
 2. **Real Infrastructure Export Pipeline:** Add a one-click *"Export to Terraform & Kubernetes Helm Chart"* engine that compiles the generated blueprint into a downloadable `.tar.gz` repository containing tested, syntax-valid HCL modules and CI/CD workflow YAMLs.
-3. **Live Sandbox Backend Hook:** Connect the terminal CLI (`stackpilot-cli`) to an ephemeral Firecracker microVM / sandbox runner to execute real `kubectl`, `trivy`, and `puppet-lint` checks in the browser.
+3. **Live Sandbox Backend Hook:** Connect the terminal CLI (`cloudforge-cli`) to an ephemeral Firecracker microVM / sandbox runner to execute real `kubectl`, `trivy`, and `puppet-lint` checks in the browser.
 
 ---
 

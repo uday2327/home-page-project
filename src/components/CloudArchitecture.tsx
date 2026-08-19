@@ -39,9 +39,8 @@ export const CloudArchitecture: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 07 · CLOUD PLATFORM ARCHITECTURE
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            CLOUD & PLATFORM
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Cloud architecture built for what comes next.
@@ -53,7 +52,7 @@ export const CloudArchitecture: React.FC = () => {
 
         {/* Cloud Ecosystem Selector Pills */}
         <div className="flex items-center gap-2 mb-6">
-          <span className="text-xs font-mono text-[#71717A] uppercase mr-2">Target Cloud:</span>
+          <span className="text-xs text-[#71717A] mr-2">Cloud provider</span>
           {(['aws', 'azure', 'gcp'] as const).map((cloud) => (
             <button
               key={cloud}
@@ -74,8 +73,8 @@ export const CloudArchitecture: React.FC = () => {
           
           {/* Top Application Node */}
           <div className="p-3.5 rounded-xl bg-[#FAF9F5] border border-[#18181B]/8 max-w-sm mx-auto text-center">
-            <span className="text-[10px] font-mono text-[#71717A] uppercase block">Entrypoint</span>
-            <span className="text-xs font-mono font-bold text-[#18181B]">APPLICATION WORKLOAD</span>
+            <span className="text-[10px] text-[#71717A] uppercase block">Application</span>
+            <span className="text-xs font-semibold text-[#18181B]">Application workload</span>
           </div>
 
           <div className="flex justify-center my-2">
@@ -84,8 +83,8 @@ export const CloudArchitecture: React.FC = () => {
 
           {/* Cloud Platform Layer */}
           <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200/60 max-w-md mx-auto text-center">
-            <span className="text-[10px] font-mono text-[#2563EB] uppercase font-semibold block">Platform Fabric</span>
-            <span className="text-xs font-mono font-bold text-[#18181B]">{current.name}</span>
+            <span className="text-[10px] text-[#2563EB] uppercase font-semibold block">Platform</span>
+            <span className="text-xs font-semibold text-[#18181B]">{current.name}</span>
           </div>
 
           <div className="flex justify-center my-2">
@@ -99,7 +98,7 @@ export const CloudArchitecture: React.FC = () => {
             <div className="p-4 rounded-xl bg-[#FAF9F5] border border-[#18181B]/8">
               <div className="flex items-center gap-2 mb-2 pb-2 border-b border-[#18181B]/6">
                 <Cpu className="w-4 h-4 text-[#2563EB]" />
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase">COMPUTE</span>
+                <span className="text-xs font-semibold text-[#18181B] uppercase">Compute</span>
               </div>
               <ul className="space-y-1.5 text-xs font-mono text-[#52525B]">
                 <li className="flex items-center gap-1.5">
@@ -121,7 +120,7 @@ export const CloudArchitecture: React.FC = () => {
             <div className="p-4 rounded-xl bg-[#FAF9F5] border border-[#18181B]/8">
               <div className="flex items-center gap-2 mb-2 pb-2 border-b border-[#18181B]/6">
                 <Network className="w-4 h-4 text-[#2563EB]" />
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase">NETWORKING</span>
+                <span className="text-xs font-semibold text-[#18181B] uppercase">Networking</span>
               </div>
               <ul className="space-y-1.5 text-xs font-mono text-[#52525B]">
                 <li className="flex items-center gap-1.5">
@@ -143,7 +142,7 @@ export const CloudArchitecture: React.FC = () => {
             <div className="p-4 rounded-xl bg-[#FAF9F5] border border-[#18181B]/8">
               <div className="flex items-center gap-2 mb-2 pb-2 border-b border-[#18181B]/6">
                 <Database className="w-4 h-4 text-[#2563EB]" />
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase">DATA & STORAGE</span>
+                <span className="text-xs font-semibold text-[#18181B] uppercase">Data & storage</span>
               </div>
               <ul className="space-y-1.5 text-xs font-mono text-[#52525B]">
                 <li className="flex items-center gap-1.5">
@@ -166,9 +165,9 @@ export const CloudArchitecture: React.FC = () => {
           {/* IaC & Provisioning Footer */}
           <div className="mt-6 p-3.5 rounded-xl bg-[#FAF9F5] border border-[#18181B]/8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono">
             <span className="text-[#71717A]">Provisioned via: <strong className="text-[#18181B]">{current.iac}</strong></span>
-            <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-[11px]">
-              Declarative State Locked
-            </span>
+              <span className="text-[11px] text-[#71717A]">
+                Terraform-managed
+              </span>
           </div>
 
         </div>

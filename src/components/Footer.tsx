@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
         {/* Bottom Bar: Copyright & Easter Egg Trigger */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-[#71717A]">
           <div className="flex items-center gap-2">
-            <span>© {currentYear} STACKPILOT. All rights reserved.</span>
+            <span>© {currentYear} CLOUDFORGE. All rights reserved.</span>
             <span>·</span>
             <span>Acdyon Technologies Submission</span>
           </div>

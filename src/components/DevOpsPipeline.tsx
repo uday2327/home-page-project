@@ -35,7 +35,7 @@ export const DevOpsPipeline: React.FC = () => {
       command: 'git log -1 --format="%h - %s (%an)"',
       output: [
         'Commit: 9f4a82b (chore: update api gateway routing)',
-        'Signed-off-by: platform-lead <infra@stackpilot.dev>',
+        'Signed-off-by: platform-lead <infra@cloudforge.dev>',
         'Trigger: Push event on main branch validated',
       ],
     },
@@ -97,9 +97,9 @@ export const DevOpsPipeline: React.FC = () => {
       icon: Archive,
       status: 'Passed',
       summary: 'OCI artifact publishing & Cosign cryptographic signature',
-      command: 'cosign sign --key k8s://secrets/cosign.key cr.stackpilot.dev/app:v2.4.0',
+      command: 'cosign sign --key k8s://secrets/cosign.key cr.cloudforge.dev/app:v2.4.0',
       output: [
-        'Pushed image: cr.stackpilot.dev/app:v2.4.0 (digest: sha256:d82e18)',
+        'Pushed image: cr.cloudforge.dev/app:v2.4.0 (digest: sha256:d82e18)',
         'Generated attestation SBOM (Software Bill of Materials)',
         'Cosign keyless signature confirmed valid on Rekor transparency log',
       ],
@@ -112,7 +112,7 @@ export const DevOpsPipeline: React.FC = () => {
       summary: 'Declarative GitOps sync & progressive canary rollout',
       command: 'kubectl apply -k ./overlays/production --prune',
       output: [
-        'deployment.apps/stackpilot-api created',
+        'deployment.apps/cloudforge-api created',
         'horizontalpodautoscaler.autoscaling/api-hpa unchanged',
         'service/api-svc routing ready on cluster IP: 10.96.14.22',
       ],
@@ -123,7 +123,7 @@ export const DevOpsPipeline: React.FC = () => {
       icon: CheckCircle2,
       status: 'Live',
       summary: 'Traffic switch, telemetry confirmation, zero downtime',
-      command: 'curl -s -o /dev/null -w "%{http_code}" https://api.stackpilot.dev/healthz',
+      command: 'curl -s -o /dev/null -w "%{http_code}" https://api.cloudforge.dev/healthz',
       output: [
         'HTTP Response 200 OK',
         'Active Pods: 6 / 6 Healthy',
@@ -140,9 +140,8 @@ export const DevOpsPipeline: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 05 · DEVOPS AUTOMATION
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            DEVOPS AUTOMATION
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Automation that moves with your code.
@@ -156,11 +155,11 @@ export const DevOpsPipeline: React.FC = () => {
         <div className="bg-white rounded-2xl border border-[#18181B]/8 p-5 sm:p-7 shadow-2xs">
           
           <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#18181B]/6">
-            <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider">
-              Interactive Pipeline Runner
+            <span className="text-[11px] text-[#71717A] uppercase tracking-wider">
+              Delivery pipeline
             </span>
-            <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-              ● 8 / 8 STAGES AUTOMATED
+            <span className="text-[11px] text-emerald-700">
+              <span className="mr-1">●</span> Automated delivery
             </span>
           </div>
 
@@ -185,7 +184,7 @@ export const DevOpsPipeline: React.FC = () => {
                     }`}>
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="text-[11px] font-mono font-bold text-[#18181B]">
+                    <span className="text-[11px] font-semibold text-[#18181B]">
                       {stage.name}
                     </span>
                     <span className="text-[9px] font-mono text-emerald-600 mt-0.5">
@@ -226,17 +225,17 @@ export const DevOpsPipeline: React.FC = () => {
             })}
           </div>
 
-          {/* Simulated stage output for the portfolio demo */}
+            {/* Selected stage details */}
           <div className="mt-4 rounded-xl bg-[#18181B] text-[#FAF9F5] p-4 sm:p-5 font-mono text-xs">
             <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
               <div className="flex items-center gap-2">
                 <Terminal className="w-3.5 h-3.5 text-[#3B82F6]" />
                 <span className="text-[#FAF9F5] font-semibold text-[11px]">
-                  DEMO STAGE INSPECTOR: {activeStage.name}
+                  {activeStage.name} stage
                 </span>
               </div>
-              <span className="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">
-                DEMO STATUS: {activeStage.status.toUpperCase()}
+              <span className="text-[10px] text-emerald-400">
+                <span className="mr-1">●</span>{activeStage.status}
               </span>
             </div>
 

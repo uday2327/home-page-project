@@ -66,7 +66,7 @@ export function App() {
         {/* 10. CLOUD (Multi-cloud Architecture) */}
         <CloudArchitecture />
 
-        {/* 11. OBSERVABILITY (Production dashboard with DEMO ENVIRONMENT badge) */}
+        {/* 11. OBSERVABILITY */}
         <ObservabilityDashboard />
 
         {/* 12. OUR WORK (3 real editorial case studies) */}

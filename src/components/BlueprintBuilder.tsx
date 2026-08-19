@@ -116,9 +116,8 @@ export const BlueprintBuilder: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 04 · INTERACTIVE BLUEPRINT GENERATOR
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            BUILD YOUR ARCHITECTURE
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Design your production stack.
@@ -136,11 +135,13 @@ export const BlueprintBuilder: React.FC = () => {
             
             {/* STEP 1 */}
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                  STEP 1 · WHAT ARE YOU BUILDING?
+              <div className="mb-3">
+                <span className="text-[11px] font-medium text-[#71717A] tracking-wider block mb-1">
+                  STEP 1
                 </span>
-                <span className="text-[10px] font-mono text-[#71717A]">Type</span>
+                <span className="text-sm font-semibold text-[#18181B]">
+                  What are you building?
+                </span>
               </div>
               <div className="space-y-1.5">
                 {appTypes.map((type) => (
@@ -166,17 +167,19 @@ export const BlueprintBuilder: React.FC = () => {
 
             {/* STEP 2 */}
             <div className="pt-5 border-t border-[#18181B]/6">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                  STEP 2 · YOUR STACK
+              <div className="mb-3">
+                <span className="text-[11px] font-medium text-[#71717A] tracking-wider block mb-1">
+                  STEP 2
                 </span>
-                <span className="text-[10px] font-mono text-[#71717A]">Technologies</span>
+                <span className="text-sm font-semibold text-[#18181B]">
+                  Your technology stack
+                </span>
               </div>
 
               <div className="space-y-3">
                 {/* Frontend Select */}
                 <div>
-                  <label className="text-[11px] font-mono text-[#71717A] mb-1 block">Frontend Framework</label>
+                  <label className="text-[11px] text-[#71717A] mb-1 block">Frontend framework</label>
                   <select
                     value={frontend}
                     onChange={(e) => { setFrontend(e.target.value); if (status === 'ready') setStatus('idle'); }}
@@ -191,7 +194,7 @@ export const BlueprintBuilder: React.FC = () => {
 
                 {/* Backend Select */}
                 <div>
-                  <label className="text-[11px] font-mono text-[#71717A] mb-1 block">Backend Runtime</label>
+                  <label className="text-[11px] text-[#71717A] mb-1 block">Backend runtime</label>
                   <select
                     value={backend}
                     onChange={(e) => { setBackend(e.target.value); if (status === 'ready') setStatus('idle'); }}
@@ -206,7 +209,7 @@ export const BlueprintBuilder: React.FC = () => {
 
                 {/* Database Select */}
                 <div>
-                  <label className="text-[11px] font-mono text-[#71717A] mb-1 block">Primary Database</label>
+                  <label className="text-[11px] text-[#71717A] mb-1 block">Database</label>
                   <select
                     value={database}
                     onChange={(e) => { setDatabase(e.target.value); if (status === 'ready') setStatus('idle'); }}
@@ -223,11 +226,13 @@ export const BlueprintBuilder: React.FC = () => {
 
             {/* STEP 3 */}
             <div className="pt-5 border-t border-[#18181B]/6">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                  STEP 3 · WHAT MATTERS MOST?
+              <div className="mb-3">
+                <span className="text-[11px] font-medium text-[#71717A] tracking-wider block mb-1">
+                  STEP 3
                 </span>
-                <span className="text-[10px] font-mono text-[#71717A]">Priorities</span>
+                <span className="text-sm font-semibold text-[#18181B]">
+                  What matters most?
+                </span>
               </div>
               <div className="grid grid-cols-2 gap-2">
                 {priorityOptions.map((p) => {
@@ -236,7 +241,7 @@ export const BlueprintBuilder: React.FC = () => {
                     <button
                       key={p}
                       onClick={() => { togglePriority(p); if (status === 'ready') setStatus('idle'); }}
-                      className={`p-2.5 rounded-xl text-left text-xs font-mono transition-all border flex items-center gap-2 ${
+                      className={`p-2.5 rounded-xl text-left text-xs transition-all border flex items-center gap-2 ${
                         isChecked
                           ? 'bg-blue-50/70 border-blue-200 text-[#18181B] font-medium'
                           : 'bg-[#FAF9F5]/40 border-transparent text-[#71717A] hover:bg-[#FAF9F5]'
@@ -258,7 +263,7 @@ export const BlueprintBuilder: React.FC = () => {
             <button
               onClick={handleGenerate}
               disabled={status === 'generating'}
-              className="w-full py-3 px-4 rounded-xl bg-[#18181B] text-[#FAF9F5] text-xs font-mono font-semibold tracking-wider hover:bg-[#27272A] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-xs disabled:opacity-75 cursor-pointer"
+              className="w-full py-3 px-4 rounded-xl bg-[#18181B] text-[#FAF9F5] text-xs font-semibold tracking-wide hover:bg-[#27272A] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-xs disabled:opacity-75 cursor-pointer"
             >
               {status === 'generating' ? (
                 <>
@@ -277,7 +282,7 @@ export const BlueprintBuilder: React.FC = () => {
           {/* Right Column: Blueprint Result & Topology */}
           <div className="lg:col-span-7">
             {status === 'generating' ? (
-              /* Generating Animation State (Section 32: Analyzing -> Designing -> Ready) */
+              /* Generating animation state */
               <div className="bg-white rounded-2xl border border-[#18181B]/8 p-12 text-center shadow-2xs">
                 <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#2563EB] mx-auto flex items-center justify-center mb-4">
                   <RefreshCw className="w-6 h-6 animate-spin" />
@@ -300,19 +305,20 @@ export const BlueprintBuilder: React.FC = () => {
                 </div>
               </div>
             ) : (
-              /* Section 16: Resulting Production Architecture Blueprint */
+              /* Resulting production architecture */
               <div className="bg-white rounded-2xl border border-[#18181B]/8 overflow-hidden shadow-2xs">
                 
                 {/* Result Header */}
                 <div className="px-5 py-3.5 bg-[#F8F7F2] border-b border-[#18181B]/8 flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] font-mono text-[#71717A] uppercase tracking-wider block">Target Architecture</span>
-                    <span className="text-xs font-mono font-bold text-[#18181B]">
-                      YOUR PRODUCTION BLUEPRINT · {appType.toUpperCase()}
+                    <span className="text-[10px] font-medium text-[#71717A] uppercase tracking-wider block">Production architecture</span>
+                    <span className="text-sm font-semibold text-[#18181B]">
+                      {appType}
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full font-medium">
-                    GENERATED
+                  <span className="inline-flex items-center gap-1.5 text-[11px] text-emerald-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    Ready
                   </span>
                 </div>
 
@@ -323,7 +329,7 @@ export const BlueprintBuilder: React.FC = () => {
                   <div className="flex justify-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white border border-[#18181B]/10 shadow-2xs font-mono text-xs font-medium text-[#18181B]">
                       <Globe className="w-3.5 h-3.5 text-[#2563EB]" />
-                      <span>USERS (Worldwide Traffic)</span>
+                      <span>USERS</span>
                     </div>
                   </div>
 
@@ -334,8 +340,8 @@ export const BlueprintBuilder: React.FC = () => {
                   {/* CDN */}
                   <div className="flex justify-center">
                     <div className="w-full max-w-sm p-2.5 rounded-xl bg-white border border-[#18181B]/10 text-center shadow-2xs">
-                      <div className="text-[10px] font-mono text-[#71717A] uppercase">Edge Cache</div>
-                      <div className="text-xs font-mono font-bold text-[#18181B]">GLOBAL CDN · Cloudflare / CloudFront</div>
+                      <div className="text-[10px] text-[#71717A] uppercase">Global CDN</div>
+                      <div className="text-xs font-medium text-[#18181B]">Cloudflare / CloudFront</div>
                     </div>
                   </div>
 
@@ -346,8 +352,9 @@ export const BlueprintBuilder: React.FC = () => {
                   {/* Load Balancer */}
                   <div className="flex justify-center">
                     <div className="w-full max-w-sm p-2.5 rounded-xl bg-white border border-[#2563EB]/40 ring-1 ring-[#2563EB]/10 text-center shadow-2xs">
-                      <div className="text-[10px] font-mono text-[#2563EB] uppercase font-semibold">Traffic Router</div>
-                      <div className="text-xs font-mono font-bold text-[#18181B]">APPLICATION LOAD BALANCER (TLS Termination)</div>
+                      <div className="text-[10px] text-[#2563EB] uppercase font-semibold">Load balancer</div>
+                      <div className="text-xs font-medium text-[#18181B]">Application Load Balancer</div>
+                      <div className="text-[10px] text-[#71717A] mt-0.5">TLS termination</div>
                     </div>
                   </div>
 
@@ -358,14 +365,14 @@ export const BlueprintBuilder: React.FC = () => {
                   {/* App Pods Dual Grid */}
                   <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
                     <div className="p-3 rounded-xl bg-white border border-[#18181B]/10 text-center shadow-2xs">
-                      <div className="text-[10px] font-mono text-emerald-600 font-medium">● ACTIVE POD 1</div>
+                        <div className="text-[10px] text-emerald-600 font-medium">● Healthy</div>
                       <div className="text-xs font-mono font-semibold text-[#18181B] mt-0.5">{frontend} + {backend}</div>
-                      <div className="text-[10px] text-[#71717A] font-mono">Port 8080 · Health: OK</div>
+                        <div className="text-[10px] text-[#71717A]">Port 8080</div>
                     </div>
                     <div className="p-3 rounded-xl bg-white border border-[#18181B]/10 text-center shadow-2xs">
-                      <div className="text-[10px] font-mono text-emerald-600 font-medium">● ACTIVE POD 2</div>
+                        <div className="text-[10px] text-emerald-600 font-medium">● Healthy</div>
                       <div className="text-xs font-mono font-semibold text-[#18181B] mt-0.5">{frontend} + {backend}</div>
-                      <div className="text-[10px] text-[#71717A] font-mono">Port 8080 · Health: OK</div>
+                        <div className="text-[10px] text-[#71717A]">Port 8080</div>
                     </div>
                   </div>
 
@@ -376,17 +383,21 @@ export const BlueprintBuilder: React.FC = () => {
                   {/* Database Node */}
                   <div className="flex justify-center">
                     <div className="w-full max-w-sm p-3 rounded-xl bg-white border border-[#18181B]/10 text-center shadow-2xs">
-                      <div className="text-[10px] font-mono text-[#71717A] uppercase">Persistence Tier</div>
-                      <div className="text-xs font-mono font-bold text-[#18181B] flex items-center justify-center gap-1.5">
+                      <div className="text-[10px] text-[#71717A] uppercase">Database</div>
+                      <div className="text-xs font-medium text-[#18181B] flex items-center justify-center gap-1.5">
                         <Database className="w-3.5 h-3.5 text-[#18181B]" />
                         <span>{database} (Primary + Replica Sync)</span>
                       </div>
                     </div>
                   </div>
 
+                  <p className="text-xs text-[#71717A] text-center pt-1">
+                    Built around your selected stack and priorities.
+                  </p>
+
                 </div>
 
-                {/* Supporting Infrastructure Specifications (Section 16) */}
+                {/* Supporting infrastructure */}
                 <div className="p-5 bg-white border-t border-[#18181B]/8 space-y-3">
                   <div className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider mb-2">
                     Supporting Production Infrastructure
@@ -440,7 +451,7 @@ export const BlueprintBuilder: React.FC = () => {
               </div>
             )}
 
-            {/* Section 17: Technology Explanation ("Why this architecture?") */}
+            {/* Technology explanation */}
             <div className="mt-8 bg-white rounded-2xl border border-[#18181B]/8 p-5 shadow-2xs">
               <h3 className="text-sm font-mono font-bold text-[#18181B] uppercase tracking-wider mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#2563EB]" />

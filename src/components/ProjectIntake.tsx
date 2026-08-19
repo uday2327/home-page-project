@@ -51,9 +51,8 @@ export const ProjectIntake: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 11 & 28 · PROJECT INTAKE & SCOPING
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            START A PROJECT
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Tell us what you're building.
@@ -63,7 +62,7 @@ export const ProjectIntake: React.FC = () => {
           </p>
         </div>
 
-        {/* Section 28: Pricing Philosophy Disclaimer Box */}
+        {/* Pricing philosophy */}
         <div className="mb-8 p-4 rounded-xl bg-white border border-[#18181B]/8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#2563EB]" />

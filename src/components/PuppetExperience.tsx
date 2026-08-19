@@ -32,9 +32,8 @@ export const PuppetExperience: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 19 · CONFIGURATION MANAGEMENT
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            CONFIGURATION MANAGEMENT
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Keep infrastructure consistent.
@@ -50,7 +49,7 @@ export const PuppetExperience: React.FC = () => {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-[#18181B]/6">
             <div>
               <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                Fleet State Orchestration
+                Configuration state
               </span>
               <p className="text-xs text-[#52525B] mt-0.5">
                 Toggle below to simulate configuration drift vs Puppet enforcement.
@@ -83,7 +82,7 @@ export const PuppetExperience: React.FC = () => {
                   Without Configuration Automation
                 </span>
                 <span className="text-[10px] font-mono text-amber-700 bg-amber-100/80 px-2 py-0.5 rounded border border-amber-300">
-                  DRIFT DETECTED
+                  Drift detected
                 </span>
               </div>
               <div className="space-y-2 font-mono text-xs">
@@ -120,7 +119,7 @@ export const PuppetExperience: React.FC = () => {
                   With Puppet Desired State
                 </span>
                 <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                  ● 100% IN CONVERGENCE
+                  <span className="mr-1">●</span> In sync
                 </span>
               </div>
               

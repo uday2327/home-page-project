@@ -30,9 +30,8 @@ export const ObservabilityDashboard: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 08 · OBSERVABILITY & TELEMETRY
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            OBSERVABILITY
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Know what production is doing.
@@ -49,7 +48,7 @@ export const ObservabilityDashboard: React.FC = () => {
           <div className="px-5 py-3.5 bg-[#F8F7F2] border-b border-[#18181B]/8 flex flex-wrap items-center justify-between gap-3">
             
             <div className="flex items-center gap-3">
-              <span className="flex items-center gap-2 text-xs font-mono font-bold text-[#18181B]">
+              <span className="flex items-center gap-2 text-xs font-semibold text-[#18181B]">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse-subtle" />
                 PRODUCTION CLUSTER
               </span>
@@ -58,13 +57,9 @@ export const ObservabilityDashboard: React.FC = () => {
               </span>
             </div>
 
-            {/* Crucial Assessment Constraint: DEMO ENVIRONMENT badge */}
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-[#71717A] bg-amber-50 text-amber-800 border border-amber-300 px-2.5 py-0.5 rounded-full">
-                DEMO ENVIRONMENT
-              </span>
-              <span className="text-[11px] font-mono text-[#71717A] hidden sm:inline">
-                Live simulated stream
+              <span className="text-[11px] text-[#71717A] hidden sm:inline">
+                Example telemetry
               </span>
             </div>
 
@@ -134,10 +129,10 @@ export const ObservabilityDashboard: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                  SERVICES TELEMETRY
+                  Service health
                 </span>
                 <span className="text-[11px] font-mono text-[#71717A]">
-                  4 / 4 Nodes Verified
+                  4 services
                 </span>
               </div>
 

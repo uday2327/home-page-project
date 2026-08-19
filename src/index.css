@@ -61,6 +61,10 @@
     color: #18181B;
     overflow-x: hidden;
   }
+
+  #root {
+    overflow-x: hidden;
+  }
 }
 
 /* Custom subtle scrollbar */

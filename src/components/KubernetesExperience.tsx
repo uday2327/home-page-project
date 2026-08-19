@@ -59,9 +59,8 @@ export const KubernetesExperience: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 20 · CONTAINER ORCHESTRATION
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            KUBERNETES
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             Run containers without babysitting them.
@@ -80,11 +79,11 @@ export const KubernetesExperience: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Cpu className="w-4 h-4 text-[#2563EB]" />
                 <span className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider">
-                  Kubernetes Cluster · Production Namespace (production-east1)
+                  Kubernetes cluster
                 </span>
               </div>
               <span className="text-xs text-[#52525B] font-mono mt-0.5 block">
-                Deployment: api-workload · Target Replicas: {pods.length}
+                API workload · {pods.length} replicas
               </span>
             </div>
 
@@ -110,8 +109,8 @@ export const KubernetesExperience: React.FC = () => {
                 <span className="text-[11px]">Scale Out</span>
               </button>
 
-              <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 font-medium">
-                {pods.filter(p => p.status === 'Running').length}/{pods.length} READY
+              <span className="text-[10px] text-emerald-700 font-medium">
+                <span className="mr-1">●</span>{pods.filter(p => p.status === 'Running').length}/{pods.length} ready
               </span>
             </div>
           </div>
@@ -119,10 +118,10 @@ export const KubernetesExperience: React.FC = () => {
           {/* Pod Grid with Click-to-Kill Self-Healing Demo */}
           <div className="mb-4 flex items-center justify-between">
             <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider">
-              Pod Replica Status (Click any pod to test self-healing)
+              Pod health
             </span>
             <span className="text-[11px] font-mono text-[#2563EB]">
-              Auto-Healing Controller Active
+              Self-healing enabled
             </span>
           </div>
 
@@ -163,10 +162,9 @@ export const KubernetesExperience: React.FC = () => {
             ))}
           </div>
 
-          {/* Section 20 Core Concepts Grid */}
           <div className="mt-8 pt-6 border-t border-[#18181B]/6">
             <h3 className="text-xs font-mono font-bold text-[#18181B] uppercase tracking-wider mb-4">
-              Production Kubernetes Principles
+              Kubernetes principles
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {topics.map((t) => {

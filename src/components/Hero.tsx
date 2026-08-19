@@ -12,8 +12,7 @@ export const Hero: React.FC = () => {
         
         {/* Eyebrow badge */}
         <div className="flex justify-center mb-5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#18181B]/5 border border-[#18181B]/10 text-[#18181B] text-xs font-mono tracking-wider uppercase font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#18181B]/5 border border-[#18181B]/10 text-[#18181B] text-xs tracking-wider uppercase font-medium">
             CLOUD & PLATFORM ENGINEERING
           </div>
         </div>
@@ -49,17 +48,15 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Architectural Pillars Micro Ticker */}
-          <div className="mt-8 pt-6 border-t border-[#18181B]/6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-mono text-[#71717A]">
+          <div className="mt-8 pt-6 border-t border-[#18181B]/6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#71717A]">
             <span className="flex items-center gap-1.5">
               <Cloud className="w-3.5 h-3.5 text-[#2563EB]" />
               Immutable Infrastructure
             </span>
-            <span className="hidden sm:inline text-[#18181B]/20">·</span>
             <span className="flex items-center gap-1.5">
               <Cpu className="w-3.5 h-3.5 text-[#2563EB]" />
               Kubernetes Orchestration
             </span>
-            <span className="hidden sm:inline text-[#18181B]/20">·</span>
             <span className="flex items-center gap-1.5">
               <Shield className="w-3.5 h-3.5 text-[#2563EB]" />
               Continuous DevSecOps
@@ -67,7 +64,6 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Section 10 & 11: Production Architecture Visual */}
         <ArchitectureHero />
 
       </div>

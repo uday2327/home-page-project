@@ -43,9 +43,8 @@ export const Process: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <div className="text-xs font-mono font-medium text-[#2563EB] tracking-wider uppercase mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-            SECTION 10 · OUR METHODOLOGY
+          <div className="text-xs font-medium text-[#2563EB] tracking-wider uppercase mb-2">
+            HOW WE WORK
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#18181B] leading-tight">
             How we work.
@@ -57,7 +56,7 @@ export const Process: React.FC = () => {
 
         {/* Visual Lifecycle Banner */}
         <div className="p-3.5 rounded-xl bg-white border border-[#18181B]/8 mb-8 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-          <span className="text-[#71717A] uppercase">Lifecycle Flow:</span>
+            <span className="text-[#71717A] uppercase">Our process</span>
           <div className="flex flex-wrap items-center gap-2 text-[#18181B] font-bold">
             <span>01 DISCOVER</span>
             <span className="text-[#71717A]">→</span>
@@ -80,7 +79,7 @@ export const Process: React.FC = () => {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-[#71717A]">
+                    <span className="text-xs font-semibold text-[#71717A]">
                       {step.number}
                     </span>
                     <div className="p-2 rounded-lg bg-[#FAF9F5] border border-[#18181B]/6 text-[#18181B]">
@@ -88,7 +87,7 @@ export const Process: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider mb-1">
+                  <h3 className="text-xs font-semibold text-[#2563EB] uppercase tracking-wider mb-1">
                     {step.title}
                   </h3>
                   <h4 className="text-sm font-bold text-[#18181B] tracking-tight mb-2">
